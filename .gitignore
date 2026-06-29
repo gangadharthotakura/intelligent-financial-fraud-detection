@@ -1,0 +1,369 @@
+# ============================================================================
+# Intelligent Financial Fraud Detection Platform - .gitignore
+# Professional Python project ignore patterns
+# ============================================================================
+
+# ============================================================================
+# VIRTUAL ENVIRONMENTS
+# ============================================================================
+venv/
+ENV/
+env/
+.venv
+env.bak/
+venv.bak/
+.env
+.env.local
+.env.*.local
+*.egg-info/
+dist/
+build/
+
+# ============================================================================
+# PYTHON CACHE & COMPILED FILES
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ============================================================================
+# JUPYTER NOTEBOOK & IPYTHON
+# ============================================================================
+.ipynb_checkpoints
+*.ipynb_checkpoints
+*.ipynb
+.ipython/
+.ipython/*
+ipython_log.txt
+*.ipynb
+
+# ============================================================================
+# IDE & EDITOR FILES
+# ============================================================================
+# VS Code
+.vscode/
+*.code-workspace
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.vim
+.*.swp
+.*.swo
+*~
+.netrwhist
+tags
+Session.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Visual Studio
+.vs/
+.visualstudiocode/
+
+# Atom
+.atom/
+.atomignore
+
+# Other editors
+*.bak
+*.backup
+*#
+
+# ============================================================================
+# MODEL & DATA FILES (Large binary artifacts)
+# ============================================================================
+# Raw datasets - exclude to avoid committing large files
+data/*.csv
+data/*.zip
+data/*.tar.gz
+data/*.7z
+!data/.gitkeep
+
+# Processed data
+data/processed/
+!data/processed/.gitkeep
+
+# Trained models - exclude to avoid committing large binaries
+models/*.joblib
+models/*.pkl
+models/*.pickle
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.model
+!models/.gitkeep
+
+# SHAP & Explainability artifacts
+assets/shap_explanations/
+!assets/shap_explanations/.gitkeep
+
+# EDA reports (regenerable)
+assets/eda_reports/
+!assets/eda_reports/.gitkeep
+
+# ============================================================================
+# LOGS & TEMPORARY FILES
+# ============================================================================
+*.log
+logs/
+*.log.*
+!logs/.gitkeep
+
+# Streamlit cache
+.streamlit/
+.streamlit_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS temporary files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# TESTING & COVERAGE
+# ============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+.ruff_cache/
+
+# ============================================================================
+# BUILD & DISTRIBUTION
+# ============================================================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================================================
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.staging.local
+config.local.yaml
+config.local.yml
+settings.local.py
+
+# ============================================================================
+# DOCKER & CONTAINER FILES
+# ============================================================================
+.docker/
+docker-compose.override.yml
+.dockerignore
+
+# ============================================================================
+# COMPILATION & BYTECODE
+# ============================================================================
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# ============================================================================
+# TYPE CHECKING & LINTING
+# ============================================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# ============================================================================
+# PLATFORM-SPECIFIC FILES
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Linux
+.cache/
+.local/
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================================
+# PROJECT-SPECIFIC EXCLUSIONS
+# ============================================================================
+# Large dataset files (use DVC or data versioning instead)
+data/creditcard.csv
+data/raw/*
+!data/raw/.gitkeep
+
+# Model artifacts (use model versioning instead)
+models/**/*.joblib
+!models/.gitkeep
+
+# EDA output (regenerable, exclude to keep repo clean)
+assets/eda_reports/**/*.html
+assets/shap_explanations/**/*.html
+!assets/eda_reports/.gitkeep
+!assets/shap_explanations/.gitkeep
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Pickle files (potential security risk)
+*.pkl
+*.pickle
+
+# ============================================================================
+# DOCUMENTATION & MARKDOWN
+# ============================================================================
+# Generated documentation (can be regenerated)
+docs/_build/
+site/
+
+# ============================================================================
+# MISCELLANEOUS
+# ============================================================================
+.vscode-server/
+.remote-containers/
+.devcontainer/
+*.DotSettings
+*.user
+*.resx
+.tasks.json
+
+# Package lock files (optional - use for reproducible builds)
+# Uncomment if using Pipenv or Poetry lock files
+# Pipfile.lock
+# poetry.lock
+
+# ============================================================================
+# SECURITY - Secrets Management
+# ============================================================================
+# API keys and secrets should NEVER be committed
+.secrets
+.secret
+*.secret
+secrets.yaml
+secrets.yml
+secrets.json
+.aws/
+.gcp/
+.azure/
+
+# ============================================================================
+# COMMENTS FOR DOCUMENTATION
+# ============================================================================
+# This .gitignore file protects the repository by:
+#
+# 1. VIRTUAL ENVIRONMENTS: Excludes environment-specific files (venv, env, etc.)
+# 2. CACHE & COMPILED: Prevents __pycache__ and .pyc files from bloating the repo
+# 3. IDE FILES: Ignores editor configuration to maintain team independence
+# 4. MODEL FILES: Excludes large binary models (use model versioning system)
+# 5. DATA FILES: Excludes large CSV and raw datasets (use DVC or similar)
+# 6. LOGS: Prevents log files from cluttering the repository
+# 7. TEMPORARY FILES: Excludes swap files, backups, and OS-specific files
+# 8. SECRETS: Prevents accidental commits of API keys and credentials
+#
+# RECOMMENDATIONS:
+# - Use DVC (Data Version Control) for large files and datasets
+# - Use GitHub Secrets for environment variables in CI/CD
+# - Use .env.example for configuration templates
+# - Consider using git-lfs for very large model files
+# - Regularly audit commits with: git log --name-only | sort | uniq
+#
+# EXCEPTIONS (Files that SHOULD be committed):
+# - .gitkeep files in empty directories
+# - .env.example template file
+# - requirements.txt (with pinned versions)
+# - setup.py / pyproject.toml
+# - README.md and documentation
+# - Source code (.py files)
+# - Configuration files (*.yaml, *.yml, *.json)
+# - Test files
